@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noyau Info Form</title>
+    <style>
+      * {
+        margin: 0%;
+        font-family: "Poppins", sans-serif;
+      }
+      body{
+            background-color: rgb(36, 34, 34);
+      }      
+      nav {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .form1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 34px;
+        margin-bottom: 30px;
+        row-gap: 23px;
+        background-color: rgb(180, 179, 179);
+      }
+      .para1 {
+        font-size: 36px;
+        margin-top: 103px;
+        margin-inline: 291px;
+        text-align: center;
+        color: white;
+      }
+      .username {
+        height: 59px;
+        width: 490px;
+        font-size: xx-large;
+        text-align: center;
+        background-color: transparent;
+      }
+      .para2 {
+        font-size: 28px;
+        margin-inline: 100px;
+        text-align: center;
+        margin-bottom: 52px;
+        color: white;
+      }
+      .form1btn {
+        font-size: 30px;
+        background-color: black;
+        padding: 4px 63px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 26px;
+        color: white;
+        transition: all 1s;
+      }
+      .form1btn a{
+        text-decoration: none;
+        color: white;
+      }
+      .form1btn:hover{
+        background-color: white;
+      }
+      .form1btn a:hover{
+        color: black;
+      }
+      
+      .name {
+        color: rgb(180, 179, 179);
+        font-size: xx-large;
+      }
+      @media (max-width:742px) {
+        .para1{
+          font-size:26px;
+          margin-inline: 20px;
+          text-align: center;
+          }
+        .para2{
+
+          font-size: 20px;
+          margin-inline: 60px;
+        }
+        .form1btn {
+        font-size: 20px;
+        background-color: black;
+        padding: 4px 40px; 
+        }
+        .username {
+        height: 40px;
+        width: 300px;
+        font-size:larger;
+        text-align: center;
+        background-color: transparent;
+        }
+        .logo img{
+          height: 55px;
+        }
+        .name h1{
+          font-size: 35px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img height="65px" src="Noyau.jpg" alt="Logo" />
+        </div>
+        <div class="name">
+          <h1>Noyau Form</h1>
+        </div>
+      </nav>
+    </header>  
+      <main>
+        <div class="context">
+          <p class="para1">
+            Welcome to Noyau Members information form. Please fill in the
+            required details and proceed..
+          </p>
+        </div>
+
+        <div class="container">
+          <form class="form1" action="index2.html" method="post">
+            <label for="username"></label>
+            <input
+              class="username"
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your Username"
+              required
+            />
+            <button class="form1btn"><a href="index2.html">Save and Next</a></button>
+          </form>
+        </div>
+        <div class="context2">
+          <p class="para2">
+            In the next steps, you will be asked to provide basic information
+            first, followed by some social media IDs. Please make sure the
+            information is accurate.
+          </p>
+        </div>
+      </main>
+  </body>
+</html>
