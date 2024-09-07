@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noyau Info Form2</title>
+    <link rel="stylesheet" href="/styles/styles2.css">
+    <link rel="stylesheet" href="/styles/styles1.css">
+    <link rel="stylesheet" href="/styles/styles3.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img height="75px" src="Noyau.jpg" alt="Logo" />
+        </div>
+        <div class="namehead">
+          <h1>Noyau Form</h1>
+        </div>
+      </nav>
+    </header>
+      <main>
+        <div class="context">
+          <h1 class="onlineprofile">Online Profile</h1>  
+          <p class="para1">
+            Please fill in the required online profiles link and proceed.
+          </p>
+        </div>
+        
+        
+        <div class="container">
+        
+          <form id="multiStepForm" class="form2 form3" action="https://info.apnanotes.xyz/process_form.php" method="POST">
+            <!-- Step 1 -->
+            <div class="step active">
+              <div class="name">
+                <!-- <label class="profiletag" for="name">User:</label>
+                <input class="account" type="text" id="name" name="name" required><br><br> -->
+                <input type="hidden" id="name" name="name">
+
+              </div>
+              <div class="GitHub">
+                <!-- <label class="profiletag" for="Github">Github</label>
+                <input class="account" type="text" id="Github" name="github" placeholder="Enter GitHub Account" required> -->
+                <label class="profiletag" for="github">Github:</label>
+                <input class="account" type="text" id="github" name="github" placeholder="Enter your GitHub Account" required>
+          
+              </div>
+              <br>
+              <div class="Linkedin">
+                <!-- <label class="profiletag" for="Linkedin">LinkedIn</label>
+                <input class="account" type="text" id="Linkedin" name="linkedin" placeholder="Enter LinkedIn Account" required> 
+                -->
+                <label class="profiletag" for="linkedin">LinkedIn:</label>
+                <input class="account" type="text" id="linkedin" name="linkedin" placeholder="Enter your LinkedIn Account" required>
+              </div>
+              <br>
+              <button type="button" class="form2btn" onclick="nextStep()">Next</button>
+            </div>
+          
+            <!-- Step 2 -->
+            <div class="step">
+              <div class="Email">
+                <!-- <label class="contacttag" for="Email">Email</label>
+                <input class="usercontact" type="email" id="Email" name="email" placeholder="Enter Email" required> -->
+                <label class="contacttag" for="email">Email:</label>
+                <input class="usercontact" type="email" id="email" name="email" placeholder="Enter your Email" required>
+          
+              </div>
+              <br>
+              <div class="Phone">
+                <!-- <label class="contacttag" for="Phone">Phone Number</label>
+                <input class="usercontact" type="tel" id="Phone" name="phone" placeholder="Enter Phone Number" required> -->
+                <label class="contacttag" for="phone">Phone Number:</label>
+                <input class="usercontact" type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" required>
+              </div>
+              <div class="Discord">
+                <label class="contacttag" for="discord">Discord:</label>
+                <input class="usercontact" type="text" id="discord" name="discord" placeholder="Enter your Discord Account" required> 
+              </div>
+              <br>
+              <button type="button" class="form3btn" onclick="previousStep()">Previous</button>
+              <button type="submit" class="form3btn">Submit</button>
+            </div>
+          </form>
+       
+
+        </div>
+        <div class="context2">
+          <p class="para2">
+            Please check all information before you save it.
+          </p>
+        </div>
+      </main>
+      <script>
+        // Function to get URL query parameters
+        function getQueryParam(param) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(param);
+        }
+    
+        // Get the name and email from the URL
+        const name = getQueryParam('name');
+    
+    
+        // Populate the input fields
+        document.getElementById('name').value = name;
+      
+      </script>
+  
+    <script src="/scripts/script1.js"></script>
+  </body>
+</html>

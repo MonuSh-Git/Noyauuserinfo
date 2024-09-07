@@ -4,108 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noyau Info Form</title>
-    <style>
-      * {
-        margin: 0%;
-        font-family: "Poppins", sans-serif;
-      }
-      body{
-            background-color: rgb(36, 34, 34);
-      }      
-      nav {
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .form1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 34px;
-        margin-bottom: 30px;
-        row-gap: 23px;
-        background-color: rgb(180, 179, 179);
-      }
-      .para1 {
-        font-size: 36px;
-        margin-top: 103px;
-        margin-inline: 291px;
-        text-align: center;
-        color: white;
-      }
-      .username {
-        height: 59px;
-        width: 490px;
-        font-size: xx-large;
-        text-align: center;
-        background-color: transparent;
-      }
-      .para2 {
-        font-size: 28px;
-        margin-inline: 100px;
-        text-align: center;
-        margin-bottom: 52px;
-        color: white;
-      }
-      .form1btn {
-        font-size: 30px;
-        background-color: black;
-        padding: 4px 63px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        margin-bottom: 26px;
-        color: white;
-        transition: all 1s;
-      }
-      .form1btn a{
-        text-decoration: none;
-        color: white;
-      }
-      .form1btn:hover{
-        background-color: white;
-      }
-      .form1btn a:hover{
-        color: black;
-      }
-      
-      .name {
-        color: rgb(180, 179, 179);
-        font-size: xx-large;
-      }
-      @media (max-width:742px) {
-        .para1{
-          font-size:26px;
-          margin-inline: 20px;
-          text-align: center;
-          }
-        .para2{
-
-          font-size: 20px;
-          margin-inline: 60px;
-        }
-        .form1btn {
-        font-size: 20px;
-        background-color: black;
-        padding: 4px 40px; 
-        }
-        .username {
-        height: 40px;
-        width: 300px;
-        font-size:larger;
-        text-align: center;
-        background-color: transparent;
-        }
-        .logo img{
-          height: 55px;
-        }
-        .name h1{
-          font-size: 35px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="/styles/styles1.css">
   </head>
   <body>
     <header>
@@ -127,17 +26,18 @@
         </div>
 
         <div class="container">
-          <form class="form1" action="index2.html" method="get">
-            <label for="username"></label>
+          <form class="form1" id="form" action="" method="get">
+            <label for="name"></label>
             <input
               class="username"
               type="text"
-              id="username"
-              name="username"
+              id="name"
+              name="name"
               placeholder="Enter your Username"
               required
             />
-            <button class="form1btn"><a href="index2.html">Save and Next</a></button>
+            <button type="submit" class="form1btn">Save and Next</button>
+            <!-- <button type="submit">Submit</button> -->
           </form>
         </div>
         <div class="context2">
@@ -148,5 +48,18 @@
           </p>
         </div>
       </main>
+      <script>
+        document.getElementById('form').addEventListener('submit', function(event) {
+          event.preventDefault();
+    
+          // Get the values from the form inputs
+          const name = document.getElementById('name').value;
+          
+    
+          // Redirect to the second page with data in the URL query string
+          window.location.href = `/pages/second.html?name=${encodeURIComponent(name)}`;
+        });
+      </script>
+      <script src="/scripts/script1.js"></script>
   </body>
 </html>

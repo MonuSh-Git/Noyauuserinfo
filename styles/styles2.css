@@ -1,0 +1,134 @@
+* {
+    margin: 0%;
+    font-family: "Poppins", sans-serif;
+  }
+  /*body{
+        background-color: black;
+    }*/
+  nav {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 34px;
+    margin-bottom: 30px;
+    row-gap: 23px;
+    background-color: lightgrey;
+  }
+  .onlineprofile{
+    text-align: center;
+    font-size: 61px;
+    text-decoration: underline;
+    margin-top: 99px;
+  }
+  .para1 {
+    font-size: 36px;
+    margin-top: 66px;
+    margin-inline: 291px;
+    text-align: center;
+  }
+  .account {
+    height: 59px;
+    width: 490px;
+    font-size: xx-large;
+    text-align: center;
+  }
+  .para2 {
+    font-size: 28px;
+    margin-inline: 100px;
+    text-align: center;
+    margin-bottom: 52px;
+  }
+  .form2btn {
+    font-size: 30px;
+    background-color: #217056;
+    padding: 4px 63px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s;
+    color: white;
+  }
+  .form2btn a{
+    text-decoration: none;
+    color: white;
+  }
+  .form2btn:hover{
+    background-color: #2f9b77;
+  }
+  .form2btn a:hover{
+    color: white;
+  }
+
+
+
+  .namehead {
+    color: rgb(180, 179, 179);
+    font-size: xx-large;
+  }
+  .GitHub,.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 34px;
+    margin-bottom: -16px;
+    row-gap: 23px;
+  }
+  .Linkedin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 34px;
+    margin-bottom: 30px;
+    row-gap: 23px;
+  }
+  .profiletag{
+    font-size: 35px;
+  }
+  @media (max-width:742px) {
+    .para1{
+      font-size:26px;
+      margin-inline: 20px;
+      text-align: center;
+      }
+    .para2{
+
+      font-size: 20px;
+      margin-inline: 60px;
+    }
+    .form2btn {
+    font-size: 20px;
+    padding: 4px 40px; 
+    }
+    .account {
+    height: 40px;
+    width: 300px;
+    font-size:larger;
+    text-align: center;
+    background-color: transparent;
+    }
+    .logo img{
+      height: 55px;
+    }
+    .name h1{
+      font-size: 35px;
+    }
+  }
+
+  .step {
+    display: none;
+  }
+  .step.active {
+    display: block;
+  }
+  .button {
+    margin-top: 20px;
+  }
